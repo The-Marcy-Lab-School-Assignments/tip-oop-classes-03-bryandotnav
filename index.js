@@ -6,6 +6,16 @@
 
 class Creature {
   // write your code here
+  constructor(name, habitat){
+    this.name = name;
+    this.habitat = habitat;
+  }
+  describe(){
+    return `${this.name} lives in the ${this.habitat}.`
+  }
+  sleep(){
+    return `${this.name} falls asleep in the ${this.habitat}. 😴`
+  }
 }
 
 /**
@@ -16,6 +26,13 @@ class Creature {
 
 class Dragon extends Creature {
  //write your code here
+ constructor(name, habitat, firePower){
+  super(name, habitat);
+  this.firePower = firePower;
+ }
+ specialMove(){
+  return `${this.name} breathes fire with ${this.firePower} intensity! 🔥`
+ }
 }
 
 /**
@@ -26,6 +43,13 @@ class Dragon extends Creature {
 
 class Unicorn extends Creature {
   //write your code here
+  constructor(name, habitat, sparkleLevel){
+    super(name, habitat);
+    this.sparkleLevel = sparkleLevel;
+  }
+  specialMove(){
+    return `${this.name} heals allies with a sparkle level of ${this.sparkleLevel}! ✨`
+  }
 }
 
 // Export the classes for testing
